@@ -36,24 +36,33 @@ export function sunAnimation(){
     }, "play1");
 
     tl.to("#rays", {
-        duration: 2,
+        duration: 1,
         transformOrigin: "center",
-        scale: .1,
+        scale: 0,
         alpha:0
     }, "play1");
 
     tl.to("#sun-center", {
-        duration: 1,
+        duration: .5,
+        scale:0,
         alpha: 0
-    }, "play2");
+    }, "play1");
 
     tl.to("#moon-crescent", {
-        duration: .5,
-        display:'block'
+        duration: .25,
+        display:'block',
+        scale:0,
+        transformOrigin: "center"
+    }, "play2");
+
+    tl.from("#moon-crescent", {
+        duration: .25,
+        scale:0,
+        transformOrigin: "center"
     }, "play2");
 
     tl.to("#section-1", {
-        duration: 1,
+        duration: .5,
         backgroundColor: "#2F303F"
     }, "play2");
 
@@ -70,6 +79,12 @@ export function sunAnimation(){
         scale: 1,
         rotate: -10
     }, "play4");
+
+    // if (tl.play()) {
+    //     tl.play();
+    // } else {
+    //     tl.reverse();
+    // }
 
     return tl;
 

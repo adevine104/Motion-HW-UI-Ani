@@ -1,7 +1,7 @@
 
 
 function hideShowPopup() {
-    var x = document.getElementById("popup");
+    var x = document.getElementById("moon-crescent");
 
     if (x.style.display === "none") {
 
