@@ -2,8 +2,18 @@
     Section 1
 ============= */
 #section-1{
-    .grid-content{
-        
+    height: 850px;
+
+    >div{
+        height: 30%;
+        width: 30%;
+        margin: 0% 5% 5% 35%;
+        padding: 15% 0 0 0;
+
+        #moon-crescent{
+            display: none;
+            // visibility: hidden;
+        }
     }
 
 }
