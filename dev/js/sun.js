@@ -4,81 +4,77 @@ import {gsap} from "gsap";
 
 export function sunAnimation(){
 
-    var tl = gsap.timeline({paused: true});
+    var sunAnimation = gsap.timeline({paused:true});
 
-
-    tl.to("#rays", {
+    sunAnimation.addLabel("sunTurnsToMoon")
+    .to("#rays", {
         duration: 1,
         transformOrigin: "center",
-        scale: 1.2,
-        rotate: 10
-    }, "play");
+        scale: 1.2
+    }, "play")
 
-    tl.to("#sun-center", {
+    .to("#sun-center", {
         duration: 1,
         transformOrigin: "center",
-        scale: 1.1,
-        rotate: 10
-    }, "play");
+        scale: 1.1
+    }, "play")
 
-    tl.to("#sun-center", {
+    .to("#sun-center", {
         duration: 1,
         transformOrigin: "center",
-        scale: 1,
-        rotate: -10
-    }, "play1");
+        scale: 1
+    }, "play1")
 
-    tl.to("#rays", {
+    .to("#rays", {
         duration: 2,
         transformOrigin: "center",
-        scale: 1,
-        rotate: -10
-    }, "play1");
+        scale: 1
+    }, "play1")
 
-    tl.to("#rays", {
+    .to("#rays", {
         duration: 1,
         transformOrigin: "center",
         scale: 0,
         alpha:0
-    }, "play1");
+    }, "play1")
 
-    tl.to("#sun-center", {
+    .to("#sun-center", {
         duration: .5,
         scale:0,
         alpha: 0
-    }, "play1");
+    }, "play1")
 
-    tl.to("#moon-crescent", {
+    .to("#moon-crescent", {
         duration: .25,
         display:'block',
         scale:0,
         transformOrigin: "center"
-    }, "play2");
+    }, "play2")
 
-    tl.from("#moon-crescent", {
+    .from("#moon-crescent", {
         duration: .25,
         scale:0,
         transformOrigin: "center"
-    }, "play2");
+    }, "play2")
 
-    tl.to("#section-1", {
+    .to("#section-1", {
         duration: .5,
         backgroundColor: "#2F303F"
-    }, "play2");
+    }, "play2")
 
-    tl.to("#moon-crescent", {
+    .to("#moon-crescent", {
         duration: 1,
         transformOrigin: "center",
         scale: 1.2,
         rotate: 10
-    }, "play2");
+    }, "play2")
 
-    tl.to("#moon-crescent", {
+    .to("#moon-crescent", {
         duration: 1,
         transformOrigin: "center",
         scale: 1,
         rotate: -10
-    }, "play4");
+    }, "play4")
 
     // if (tl.play()) {
     //     tl.play();
@@ -86,9 +82,32 @@ export function sunAnimation(){
     //     tl.reverse();
     // }
 
-    return tl;
+    // return sunAnimation;
+
+    var toggles = false;
+
+    // const mainTL = gsap.timeline({paused:true});
+    // gsap.add(sunAnimation());
+    
+    $("#sunandmoon").on("click", function () {
+         
+       
+        console.log("working");
+        if(toggles === false){
+    
+            sunAnimation.play();
+            toggles = true;
+        }
+        
+    })
 
 }
 
+// var tl = gsap.timeline({paused: true});
 
+//   triggerHeart.add(heartPanda());
 
+// handle1.on("click", function(e) {
+//     e.preventDefault();
+//     triggerLaser.restart();
+//   });
