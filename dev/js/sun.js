@@ -1,10 +1,10 @@
 import {gsap} from "gsap";
-// import {smileySpeed} from "./animationSpeed.js"
+// import {} from "./click-hover.js"
 // import {smileySpeed2} from "./animationSpeed.js"
 
 export function sunAnimation(){
 
-    var tl = gsap.timeline({});
+    var tl = gsap.timeline({paused: true});
 
 
     tl.to("#rays", {
@@ -91,30 +91,4 @@ export function sunAnimation(){
 }
 
 
-// var raysMovingTimeLine = gsap.timeline({
-//     paused: true
-// });
 
-// export function raysAnimation(){
-//     raysMovingTimeLine.to("#rays",{transformOrigin:"center", duration:.5, rotation: 360}, "start")
-// }
-
-
-//   $("#sunandmoon").on("mouseenter", function(){
-//     //console.log("mouse enter");
-//     //console.log(canYouSeeTheMenu + " menu visible");
-//     if(raysMovingTimeLine){
-//         //console.log("burger to arrow");
-//         raysMovingTimeLine.play();
-//     }else(
-//         raysMovingTimeLine.reverse()
-//     )
-// })
-
-// $("#sunandmoon").on("mouseleave", function(){
-//     if(raysMovingTimeLine){
-//         //console.log("arrow to buer");
-//         raysMovingTimeLine.reverse();
-        
-//     }
-// })

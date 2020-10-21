@@ -1,24 +1,24 @@
 
 
-function hideShowPopup() {
-    var x = document.getElementById("moon-crescent");
+// function hideShowPopup() {
+//     var x = document.getElementById("sunandmoon");
 
-    if (x.style.display === "none") {
+//     if (x.style.display === "none") {
 
-      x.style.display = "block";
+//       x.style.display = "block";
 
-    } else {
+//     } else {
 
-      x.style.display = "none";
-    }
-  }
+//       x.style.display = "none";
+//     }
+//   }
 
-var sun = document.querySelector('#sun');
+// var sun = document.querySelector('#sunandmoon');
 
-window.onclick = function(event){
+// window.onclick = function(event){
 
-    if(event.target == sun){
+//     if(event.target == sun){
         
-        hideShowPopup();
-    }
-}
+//         hideShowPopup();
+//     }
+// }
