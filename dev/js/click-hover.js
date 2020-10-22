@@ -61,7 +61,7 @@ hoverMovingTimeLine.to("#rays",{transformOrigin:"center", duration:.5, scale: 1.
 
 
 
-  $("#sunandmoon").on("mouseenter", function(){
+  $("#sun").on("mouseenter", function(){
     // console.log("mouse enter");
     //console.log(canYouSeeTheMenu + " menu visible");
     if(hoverMovingTimeLine){
@@ -75,7 +75,7 @@ hoverMovingTimeLine.to("#rays",{transformOrigin:"center", duration:.5, scale: 1.
 
 
 
-$("#sunandmoon").on("mouseleave", function(){
+$("#sun").on("mouseleave", function(){
     if(hoverMovingTimeLine){
         //console.log("arrow to burger");
         hoverMovingTimeLine.reverse();
@@ -84,3 +84,42 @@ $("#sunandmoon").on("mouseleave", function(){
 })
 
 }
+
+
+
+
+export function hoverMovingTimeLine2(){
+
+    var hoverMovingTimeLine2 = gsap.timeline({paused:true});
+  
+  
+  
+  //draw svg timeline
+  hoverMovingTimeLine2.to("#moon-crescent",{transformOrigin:"center", duration:.5, scale: 1.2, rotation: -30}, "start23")
+                      
+  
+  
+  
+    $("#moon-crescent").on("mouseenter", function(){
+      // console.log("mouse enter");
+      //console.log(canYouSeeTheMenu + " menu visible");
+      if(hoverMovingTimeLine2){
+          //console.log("burger to arrow");
+          hoverMovingTimeLine2.play();
+      }else(
+          hoverMovingTimeLine2.reverse()
+      )
+  })
+  
+  
+  
+  
+  $("#moon-crescent").on("mouseleave", function(){
+      if(hoverMovingTimeLine2){
+          //console.log("arrow to burger");
+          hoverMovingTimeLine2.reverse();
+          
+      }
+  })
+  
+  }

@@ -1,9 +1,9 @@
 
 import {gsap} from "gsap";
 
-import {sunAnimation} from "./sun.js"
+import {sunAnimation, moonAnimation} from "./sunmoonAni.js"
 // import {blah} from "./click-hover.js"
-import {hoverMovingTimeLine} from "./click-hover.js"
+import {hoverMovingTimeLine, hoverMovingTimeLine2} from "./click-hover.js"
 // import {hideShowPopup} from "./popup/popup.js";
 // import {hideShowPopup} from "./popup/upload-click.js";
 
@@ -12,6 +12,8 @@ const mainTL = gsap.timeline({paused:true});
     
     mainTL.add(hoverMovingTimeLine())
     mainTL.add(sunAnimation());
+    mainTL.add(hoverMovingTimeLine2())
+    mainTL.add(moonAnimation());
     // mainTL.add(blah(),"startAll")
     
 

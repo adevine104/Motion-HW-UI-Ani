@@ -90,13 +90,13 @@
 		"sC": 3,
 		"tS": 0
 		},
-	"/dev/js/sun.js": {
+	"/dev/js/sunmoonAni.js": {
 		"bF": 0,
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "/dev/js/sun-min.js",
+		"oAP": "/dev/js/sunmoonAni-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
